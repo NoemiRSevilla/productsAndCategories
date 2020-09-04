@@ -1,0 +1,33 @@
+@using productsAndCategories.Models
+@model Product
+
+<link rel="stylesheet" href="~/css/site.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h1 class="white mr-auto text col"></h1>
+</nav>
+
+<div class="container moveit">
+    <div class="container box">
+        <a href="/categories" class="btn btn-info">Add Category</a>
+        <a href="/products" class="btn btn-info">Add Product</a>
+    </div>
+                @foreach (var sub in Model.CategorizedBy.Category)
+            {
+                <h1>@sub.Name</h1>
+            }
+    <div class="col">Add Category:
+        <form asp-action="AddCategoryToProduct" asp-controller="Home" method="post">
+            <select>
+            @foreach (var sub in Model.CategorizedBy)
+            {
+                <option value="@Model.Name"></option>
+            }
+            </select>
+            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</div>
+</body>

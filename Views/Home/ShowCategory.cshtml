@@ -1,0 +1,36 @@
+    @using productsAndCategories.Models
+    @model List<Product>
+    
+    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h1 class="white mr-auto text col"></h1>
+</nav>
+
+<div class="container moveit">
+    <div class="container box">
+        <a href="/categories" class="btn btn-info">Add Category</a>
+        <a href="/products" class="btn btn-info">Add Product</a>
+    </div>
+        <div class="row">
+            </ul>
+        </div>
+        <h6>Products</h6>
+        @foreach(var p in ViewBag.cat.ProductsOfCategories)
+        {
+            <h3>@p.Product.Name</h3>
+        }
+        <h6>Add Product: </h6>
+        <form action="/category/@ViewBag.cat.CategoryId/addproduct" method="post">
+        <select name="ProductId">
+        @foreach(var p in Model)
+        {
+            <option value="@p.ProductId">@p.Name</option>
+        }
+        <input type="hidden" name="CategoryId" value="@ViewBag.cat.CategoryId">
+        <input type="submit" value="Add" class="btn btn-info">
+        </form> 
+    </div>
+</div>
+</body>

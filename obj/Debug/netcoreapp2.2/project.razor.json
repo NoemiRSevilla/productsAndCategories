@@ -1,0 +1,50 @@
+{
+  "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/productsAndCategories.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": "productsAndCategories",
+  "Documents": [
+    {
+      "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/Views/Home/ShowCategory.cshtml",
+      "TargetPath": "Views\\Home\\ShowCategory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/Views/Home/ProductsForm.cshtml",
+      "TargetPath": "Views\\Home\\ProductsForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/Views/Home/ShowProduct.cshtml",
+      "TargetPath": "Views\\Home\\ShowProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/Views/Home/CategoriesForm.cshtml",
+      "TargetPath": "Views\\Home\\CategoriesForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/IrockMyWarlock/Documents/CODING STUFF/codingdojo/c#/ORMs/productsAndCategories/productsAndCategories/Views/Home/Dashboard.cshtml",
+      "TargetPath": "Views\\Home\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

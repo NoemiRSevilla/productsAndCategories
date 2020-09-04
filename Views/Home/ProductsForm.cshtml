@@ -1,0 +1,42 @@
+@using productsAndCategories.Models
+@model Product
+
+<link rel="stylesheet" href="~/css/site.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h1 class="white mr-auto text col">
+        <a href="/products/form" class="btn-btn-primary active">Products</a>
+        <a href="/categories/form" class="btn-btn-primary">Categories</a>
+    </h1>
+</nav>
+    <div class="container box">
+        <div class='row'>
+            <div class="container">
+                <form asp-action="SubmitProduct" asp-controller="Home" method="post">
+                    <div class="form-group">
+                        <span class="red" asp-validation-for="Name"></span>
+                        <label asp-for="Name">Product Name: </label>
+                        <input asp-for="Name" class="form-control" value=@TempData["Name"]>
+                    </div>
+                    <div class="form-group">
+                        <span class="red" asp-validation-for="Description"></span>
+                        <label asp-for="Description">Description:  </label>
+                        <input asp-for="Description" class="form-control" value=@TempData["Description"]>
+                    </div>
+                    <div class="form-group">
+                        <span class="red" asp-validation-for="Price"></span>
+                        <label asp-for="Price">Price</label>
+                        <input asp-for="Price" class="form-control" value=@TempData["Name"]>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+            @foreach (var e in ViewBag.existingProducts)
+    {
+        <a href="/product/@e.ProductId">@e.Name</a>
+    }
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@using productsAndCategories.Models
+@model Category
+
+<link rel="stylesheet" href="~/css/site.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <h1 class="white mr-auto text col">
+        <a href="/products/form" class="btn-btn-primary">Products</a>
+        <a href="/categories/form" class="btn-btn-primary active">Categories</a>
+    </h1>
+</nav>
+    <div class="container box row">
+        <div class="col"><h3>New Category</h3>
+            <div class="container">
+                <form asp-action="SubmitCategory" asp-controller="Home" method="post">
+                    <div class="form-group">
+                        <span class="red" asp-validation-for="Name"></span>
+                        <label asp-for="Name">Category Name: </label>
+                        <input asp-for="Name" class="form-control" value=@TempData["Name"]>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col">
+    
+    @foreach (var e in ViewBag.existingCategories)
+    {
+        <a href="/categories/@e.CategoryId">@e.Name</a>
+    }
+        </div>
+    </div>
+</body>
+</html>
